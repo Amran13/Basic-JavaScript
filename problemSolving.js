@@ -55,3 +55,23 @@ function largestInArray(numbers){
 };
 // console.log(largestInArray([5, 1, 3, 2, 1]));
 
+//--------- 5. Fibonacci Sereis
+// non functional way 
+const fibo = [0, 1];
+for (let i = 2; i <=10; i++){
+    fibo[i] = fibo[i-1] + fibo[i-2];
+};
+// console.log(fibo);
+
+// functional way 
+function fibonacci(nth){
+    if (typeof nth != 'number'){
+        return 'Please give a number';
+    }
+    const fibo = [0, 1];
+    for(let i = 2; i <= nth; i ++){
+        fibo[i] = fibo[i-1] + fibo[i-2];
+    }
+    return fibo;
+}
+// console.log(fibonacci())
